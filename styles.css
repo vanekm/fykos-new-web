@@ -90,7 +90,7 @@ h2.header-text {
 }
 
 .event:hover {
-    transform: scale(1.03);  /* Slightly enlarge the event block on hover */
+    transform: scale(1.05);  /* Slightly enlarge the event block on hover */
 }
 
 h1 {
@@ -105,26 +105,40 @@ h1 {
     margin: 20px 0;
 }
 
+.timeline-container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
 .middle-line {
     width: 100%;          /* Makes the line span the full width of its container */
     border: 0;            /* Removes default border */
     border-top: 5px solid white; /* Adds a border to the top side only */
     border-bottom: 5px solid white; /* Adds a border to the top side only */
+    position: absolute;
+    top: 50%;
     color: blue;
 }
 
-.logo-series {
+.logo-series, .logo-event {
     width: 30px; /* Adjust as per your logo size */
     position: absolute;
-    top: 53%; /* Middle of the page */       
     z-index: 5; /* To ensure it's above the line and other elements */
+
+}
+
+.logo-series {
+    top: 75%;
 }
 
 .logo-event {
-    width: 30px; /* Adjust as per your logo size */
-    position: absolute;
-    top: 45%; /* Middle of the page */ 
-    z-index: 5; /* To ensure it's above the line and other elements */
+    top: 20%;
+}
+
+.event.active {
+    transform: scale(1.05);  /* Makes the box slightly larger */
+    transition: transform 0.2s ease-in-out;  /* Smooth transition */
 }
 
 

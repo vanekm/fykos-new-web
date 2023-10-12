@@ -1,13 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     /* background-color: #1175da;*/
-    padding: 20px;
     background: linear-gradient(135deg, #120b53 20%, #5690cb 80%);
     color: white;
     border: 0;
     padding: 0;
 }
 
+.content-container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 
 .content-section {
     max-width: 80%;

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FYKOS</title>
+</head>
+
+<body>
+
+<div class="content-container">
+    <div class="header-container">
+        <div class="header-text-container">
+            <h1 class="header-text">FYKOS</h1>
+            <h2 class="header-text">We Inspire and Educate<br> High-School Students in Physics.</h2>
+            <p class="header-text">FYKOS has been organizing non-profit educational events in physics for over 35 years. Read more about us [link].</p>
+            <!-- <button class="custom-button">About FYKOS</button> -->
+        </div>
+        <img id="header-image" src="fykos_symbol_no_border.svg" alt="Description of the image">
+    </div>
+    
+    <div class="event-container">
+        <h2 class="section-header">Our Events</h2>
+        <p>These are the major events we organize. Read more about them at the events page [link].</p>
+        <!-- <button class="custom-button">FYKOS Events</button> -->
+        <div class="event-grid">
+            <div class="row-odd">
+                <!-- First Row -->
+                <div class="event">
+                    <h1><span class="event-date">3.11.</span> Fyzikální Náboj</h1>
+                    <p>Týmová soutěž v Praze, Ostravě a jinde ve světě</p>
+                    <p>Otevření registrace sledujte na webu</p>
+                </div>
+                <div class="event">
+                    <h1><span class="event-date">22.11.</span> Fyzikální Online</h1>
+                    <p>Celosvětová soutěž, které se může účastnit každý</p>
+                    <p>Registrace od 1.9. do 2 hodin před soutěží.</p>
+                </div>
+            </div>
+
+            <div class="row-even">
+                <!-- Second Row -->
+                <div class="event">
+                    <h1><span class="event-date">6.11.</span> DSEF</h1>
+                    <p>Den s experimentální fyzikou na Matfyzu</p>
+                    <p>Registrace od 2.10. do 3.11.</p>
+                </div>
+                <div class="event">
+                    <h1><span class="event-date">16.2.</span> Fyzikální 2024</h1>
+                    <p>Mezinárodní týmová soutěž v Praze</p>
+                    <p>Registrace od 22.11. do 9.2.</p>
+                </div>
+            </div>
+
+            <hr class="middle-line">
+
+            <!-- Third Row -->
+            <div class="row-odd">
+                <div class="event series">
+                    <h1><span class="event-date">10.10.</span> 1. série</h1>
+                    <p>Velryba, nové kolo a tření papíru</p>
+                </div>
+                <div class="event series">
+                    <h1><span class="event-date">2.1.</span> 3. série</h1>
+                    <p>Zvlhčovač, blesky a proteinový motor</p>
+                </div>
+                <div class="event series">
+                    <h1><span class="event-date">9.4.</span> 5. série</h1>
+                    <p>Bowling, med a potápějící se člun</p>
+                </div>
+            </div>
+
+            <div class="row-even">
+                <!-- Fourth Row -->
+                <div class="event series">
+                    <h1><span class="event-date">21.11.</span> 2. série</h1>
+                    <p>Pneumatika, cola a perpetuum mobile</p>
+                </div>
+                <div class="event series">
+                    <h1><span class="event-date">27.2.</span> 4. série</h1>
+                    <p>Description for 4th series</p>
+                </div>
+                <div class="event series">
+                    <h1><span class="event-date">14.5.</span> 6. série</h1>
+                    <p>Description for 6th series</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="FYKOS-corr-comp-container">
+        <h2 class="section-header">FYKOS Correspondence Competition</h2>
+        <p>The FYKOS correspondence competition is our original event. Each year, we publish 6 series of 8 physics problems of varying difficulty, topics and purpose and we provide helpful individualized feedback to each solution we receive.</p>
+        <p>Bla bla stručné info o semináři a jak funguje</p>
+        <p>Link na další info o semináři...</p>
+    </div>
+</div> 
+
+    <script>
+        function positionLogo(dateStr,classStr) {
+            // Define the timeline start and end dates
+            const startDate = new Date("2023-09-01");
+            const endDate = new Date("2024-06-30");
+            const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
+
+            const eventDate = new Date(dateStr);
+            const elapsedDays = (eventDate - startDate) / (1000 * 60 * 60 * 24);
+
+            // Calculate the position for the logo
+            const positionPercentage = (elapsedDays / totalDays) * 100;
+
+            // Create the logo element and set its position
+            const logoElem = document.createElement("img");
+            logoElem.src = "logo.png"; // Replace with the path to your logo
+            logoElem.classList.add(classStr);
+            logoElem.style.left = `${positionPercentage}%`;
+
+            // Append the logo to the body (or the container div you wish)
+            document.body.appendChild(logoElem);
+        }
+
+        // Position logos for each event
+        let dates_events = ["2023-11-03", "2023-11-06", "2023-11-22", "2024-02-16"];
+        let dates_series = ["2023-10-10", "2023-11-21", "2024-01-02", "2024-02-27", "2024-04-09","2024-05-14"];
+
+        /*
+        dates_events.forEach(function(num) {
+            positionLogo(num,"logo-event");
+        });
+        dates_series.forEach(function(num) {
+            positionLogo(num,"logo-series");
+        });
+        */
+    </script>
+</body>
+
+</html>
+
+
+

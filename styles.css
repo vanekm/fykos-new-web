@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #1175da;*/
+    background-color: #1175da;
     background: linear-gradient(135deg, #120b53 20%, #5690cb 80%);
     color: white;
     border: 0;
@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center; /* To vertically align items */
     justify-content: space-between; /* To maximize space between text-container and image */
-    height: 100vh;
+    height: 90vh;
     position: relative; /* Setting to relative to ensure z-index works */
     text-align: left;
     color: white;
@@ -63,7 +63,7 @@ h2.header-text {
 }
 
 .event-container {
-    background: rgba(0, 0, 0, .05);
+    background: rgba(0, 0, 0, .05); 
     padding: 10px;
 }
 
@@ -89,7 +89,6 @@ h2.header-text {
     flex: 0 0 40%;
     margin: 0 20px;
     background-color: rgba(0,0,0,.05);
-    color: white;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -186,4 +185,142 @@ h1 {
 
 .custom-button:focus {
     outline: none; /* Removes default focus outline */
+}
+
+/* Existing CSS here */
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .row-odd, .row-even {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;  /* Center items horizontally */
+        justify-content: center;  /* Center items vertically */
+    }
+
+    .middle-line {
+        width: 0px;
+        height: 100%;  /* Extend the line's height to fill the container */
+        border-top: 0;  /* Remove horizontal border */
+        border-left: 5px solid white;  /* Add a vertical border */
+        border-right: 5px solid white;  /* Add a vertical border */
+        top: 0;  /* Position at the top */
+        left: 50%;  /* Center the line */
+    }
+
+    .start-timeline-text, .end-timeline-text {
+        top: auto;
+        right: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .start-timeline-text {
+        bottom: 0;
+    }
+
+    .end-timeline-text {
+        top: 0;
+    }
+
+    .logo-series, .logo-event {
+        bottom: auto;
+        right: 50%;
+    }
+
+    .logo-series {
+        left: 42%; 
+    }
+
+    .logo-event {
+        right: 42%;
+    }
+}
+
+a {
+    color: white;
+}
+
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+            color: white;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-items {
+            display: flex;
+            gap: 50px;
+        }
+        .navbar-items a {
+            color: white;
+            text-decoration: none;
+        }
+        .flag-icon {
+            margin-left: 10px;
+        }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo-section {
+    width: 60%;
+}
+
+.logo-section img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.logo-section h1 {
+    font-size: 2em;
+}
+
+.logo-section p {
+    margin: 10px 0;
+}
+
+.links-section {
+    width: 40%;
+}
+
+.links-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links-section li {
+    margin: 10px 0;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-logos img {
+    margin: 0 10px;
+    height: 40px;
 }

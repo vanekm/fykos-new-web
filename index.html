@@ -177,7 +177,7 @@
 
             // Create the logo element and set its position
             const logoElem = document.createElement("img");
-            logoElem.src = "fykos_symbol.svg"; // Replace with the path to your logo
+            logoElem.src = "fykos_symbol.svg";
             logoElem.classList.add(classStr);
 
             if (window.innerWidth <= 768) {  /* Small screen */
@@ -191,6 +191,7 @@
             document.querySelector('.timeline-container').appendChild(logoElem);
         }
 
+
         // Position logos for each event
         let dates_events = ["2023-11-03", "2023-11-06", "2023-11-22", "2024-02-16"];
         let dates_series = ["2023-10-10", "2023-11-21", "2024-01-02", "2024-02-27", "2024-04-09","2024-05-14"];
@@ -202,6 +203,9 @@
         dates_series.forEach(function(num, index) {
             positionLogo(num, "logo-series", `series-${index + 1}`);
         });
+
+        const today = new Date();
+        positionLogo(today,"today-block","today-block")
 
         document.querySelectorAll('.logo-event, .logo-series').forEach(function(logo) {
             logo.addEventListener('mouseover', function() {

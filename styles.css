@@ -1,6 +1,11 @@
+
+:root {
+    --main-color: #1175da;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #1175da;
+    background-color: var(--main-color);
     /* background: linear-gradient(135deg, #120b53 20%, #5690cb 80%);  */
     color: white;
     border: 0;
@@ -93,12 +98,11 @@ h2.header-text {
 .event {
     flex: 0 0 40%;
     margin: 0 20px;
-    /* background-color: rgba(0,0,0,.05); */
-    border-radius: 5px;
-    border: 3px solid black;
+    border: 3px solid var(--main-color);
     padding: 5px 25px;
     transition: transform 0.2s;
 }
+
 
 .event.series {
     flex: 0 0 25%;
@@ -107,6 +111,7 @@ h2.header-text {
 .event-date {
     font-size: 1.2rem; /* Adjust based on your preference */
     margin-right: 5px;
+    color: var(--main-color)
 }
 
 .event:hover {
@@ -139,10 +144,10 @@ h1 {
     position: absolute;
     top: 42%;
     color: blue;
-    border-color: #1175da;
+    border-color: var(--main-color);
 }
 
-.logo-series, .logo-event {
+.logo-series, .logo-event, .today-block {
     width: 30px; /* Adjust as per your logo size */
     position: absolute;
     z-index: 5; /* To ensure it's above the line and other elements */
@@ -155,6 +160,11 @@ h1 {
 
 .logo-event {
     top: 20%;
+}
+
+.today-block{
+    width: 25px;
+    bottom: 40%;
 }
 
 .event.active {
